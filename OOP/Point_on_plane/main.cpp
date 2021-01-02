@@ -32,7 +32,6 @@ int main(int argc, char* argv[]) {
 
 	int x, y;
 	char c;
-	printf("%i\n", number_of_points);
 	for (int i = 0; i < number_of_points; ++i) {
 
 		sscanf(argv[i + 1], "(%d%c%d)", &x, &c, &y); 

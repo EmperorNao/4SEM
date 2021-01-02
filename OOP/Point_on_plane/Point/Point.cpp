@@ -34,7 +34,7 @@ void print_nearest_points_with_condition(Point* p_arr[], int number_of_points, c
 	int index_min;
 
 	setlocale(LC_ALL, "RUS");
-	std::cout << "Пары наиболее близких точек, которые разделены прямой с уравнением y=-x" << std::endl;
+	std::cout << "Пары наиболее близких точек, которые разделены прямой y=-x" << std::endl;
 	for (int i = 0; i < number_of_points; ++i) {
 
 		min_dist = DBL_MAX;
@@ -56,9 +56,11 @@ void print_nearest_points_with_condition(Point* p_arr[], int number_of_points, c
 
 		}
 
+		// нашлась хоть одна точка
 		if (index_min != i) {
 
 			used_indexes[i] = index_min;
+			// если с той точкой уже была выведена эта, то повторный вывод не нужен, т.к отношение симметрично
 			if (used_indexes[index_min] != i) {
 
 				std::cout << "Первая точка: " << "(" << p_arr[i]->get_x() << "; " << p_arr[i]->get_y() << "); Вторая точка:" \
