@@ -40,7 +40,15 @@ int main(int argc, char* argv[]) {
 	} 
 
 	print_nearest_points_with_condition(p_arr, number_of_points, condition_function);
+
+	// очистка памяти
+	for (int i = 0; i < number_of_points; ++i) {
+
+		delete p_arr[i];
+
+	}
+	delete [] p_arr;
+
 	return 0;
 
 }
-
