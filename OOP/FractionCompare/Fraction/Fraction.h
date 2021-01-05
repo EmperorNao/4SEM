@@ -1,6 +1,7 @@
 #include <iostream>
 using std::ostream;
 
+
 class Fraction {
 
 private:
