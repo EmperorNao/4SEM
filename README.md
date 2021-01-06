@@ -1,1 +1,0 @@
-Repository with labs for 4th semester at BSTU
