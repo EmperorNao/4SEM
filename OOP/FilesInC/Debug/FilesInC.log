@@ -1,0 +1,6 @@
+﻿  Binary.c
+C:\D\Programming\4SEM\OOP\FilesInC\Binary.c(40,6): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+C:\D\Programming\4SEM\OOP\FilesInC\Binary.c(87,11): warning C4101: k: неиспользованная локальная переменная
+C:\D\Programming\4SEM\OOP\FilesInC\Binary.c(87,17): warning C4101: i: неиспользованная локальная переменная
+C:\D\Programming\4SEM\OOP\FilesInC\Binary.c(118,8): warning C4013: chsize: нет определения; предполагается "extern" с возвратом типа "int"
+  FilesInC.vcxproj -> C:\D\Programming\4SEM\OOP\FilesInC\Debug\FilesInC.exe
