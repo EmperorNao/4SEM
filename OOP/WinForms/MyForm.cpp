@@ -8,6 +8,7 @@ void main(array<String^>^ args)
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 	WinForms::MyForm form;
-	Application::Run(% form);
+	form.FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
+	Application::Run(% form);	
 }
 

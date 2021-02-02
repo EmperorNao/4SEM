@@ -12,6 +12,7 @@ std::istream& operator>>(std::istream& is, Fraction& obj) {
 
 std::ostream& operator<<(std::ostream& os, Fraction obj) {
 
+	obj.reduce();
 	if (obj.denom < 0) {
 
 		obj.nom *= -1;
@@ -173,13 +174,6 @@ bool operator<(Fraction left, Fraction right) {
 }
 
 
-void operator*=(Fraction a, Fraction b) {
-
-
-
-}
-
-
 void operator*=(Fraction& a, Fraction b) {
 
 	a = a * b;
@@ -236,6 +230,49 @@ void operator/=(Fraction& a, int number) {
 }
 
 
+bool operator==(Fraction left, Fraction right) {
+
+	return (left.nom == right.nom) and (left.denom == right.denom);
+
+}
+
+
+bool operator!=(Fraction left, Fraction right) {
+
+	return (left.nom != right.nom) or (left.denom != right.denom);
+
+}
+
+
+bool operator==(Fraction left, int right) {
+
+	return left.nom == right;
+
+}
+
+
+bool operator!=(int left, Fraction right) {
+
+	return (right.denom != 1) or (right.nom != left);
+
+}
+
+
+bool operator==(int left, Fraction right) {
+
+	return right == left;
+
+}
+
+
+bool operator!=(Fraction left, int right) {
+
+
+	return right != left;
+
+}
+
+
 int Fraction::GCD(int m, int n) {
 
 	if (m < n) {
@@ -279,6 +316,12 @@ Fraction::Fraction(char* s) {
 
 void Fraction::reduce() {
 
+	if (denom < 0) {
+
+		nom *= -1;
+		denom *= -1;
+
+	}
 	int gcd = GCD(abs(nom), denom );
 	nom /= gcd;
 	denom /= gcd;

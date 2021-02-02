@@ -1,6 +1,4 @@
-/*
-
-#include <stdio.h>
+/*#include <stdio.h>
 #include <locale.h>
 #define N 3
 

@@ -1,0 +1,11 @@
+﻿  Aproximation.cpp
+C:\D\Programming\4SEM\ComputationalMath\Differences\Aproximation.cpp(13,29): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
+  Difference.cpp
+C:\D\Programming\4SEM\ComputationalMath\Differences\Aproximation.cpp(14,29): warning C4244: аргумент: преобразование "double" в "const unsigned int", возможна потеря данных
+C:\D\Programming\4SEM\ComputationalMath\Differences\Difference.cpp(9,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\ComputationalMath\Differences\Difference.cpp(32,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\ComputationalMath\Differences\Difference.cpp(47,21): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
+C:\D\Programming\4SEM\ComputationalMath\Differences\Difference.cpp(64,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(81): warning C4715: Matrix<double>::operator(): значение возвращается не при всех путях выполнения
+  Differences.vcxproj -> C:\D\Programming\4SEM\ComputationalMath\Differences\Debug\Differences.exe

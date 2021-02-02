@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include "Fraction.h"
 
 
 template <typename type>
@@ -72,7 +74,7 @@ class Matrix {
 		// обращение к матрице
 		type& operator()(int i, int j) {
 
-			if ((0 < i < m) and (0 < j < n)) {
+			if ((0 <= i) and (i < m) and (0 <= j) and (j < n)) {
 
 				return matr[i * n + j];
 
@@ -83,7 +85,7 @@ class Matrix {
 
 		const type& operator()(int i, int j) const {
 
-			if ((0 < i < m) and (0 < j < n)) {
+			if ((0 <= i) and (i = m) and (0 <= j) and (j < n)) {
 
 				return matr[i * n + j];
 
@@ -245,6 +247,22 @@ class Matrix {
 
 		}
 
+		// умножить i-тую строку на k
+		void mult_i_columns_by_k(int _i, type k) {
+
+			if ((0 <= _i) and (_i < n)) {
+
+				for (int i = 0; i < n; ++i) {
+
+					(*this)(_i, i) *= k;
+
+				}
+
+			}
+
+		}
+
+
 		// обмен i и j столбцов в матрице
 		void swap_columns(int _i, int _j) {
 
@@ -277,6 +295,22 @@ class Matrix {
 				}
 
 			}
+
+		}
+
+
+		// Удалить i-тую строку 
+		void delete_i_row(int _i) {
+
+			matr.erase(matr.begin() + _i * n, matr.begin() + (_i + 1) * n);
+			m = m - 1;
+
+		}
+
+
+		bool is_nullrow(int _i) {
+
+			return std::find_if(matr.begin() + _i * n, matr.begin() + (_i + 1) * n, [](Fraction fr) { return (fr != 0); }) == matr.begin() + (_i + 1) * n;
 
 		}
 

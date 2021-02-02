@@ -1,4 +1,3 @@
-/*
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <locale.h> 
@@ -59,4 +58,3 @@ void read_struct(inform* a) {
 	gets(a->adress);
 
 }
-*/

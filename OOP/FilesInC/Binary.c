@@ -1,3 +1,4 @@
+/*
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <string.h> 
@@ -52,11 +53,11 @@ int main() {
 void read_struct(inform* a) {
 
 	printf("¬ведите фамилию\n");
-	gets((*a).name);
+	gets(a->name);
 	printf("¬ведите номер\n");
-	gets((*a).number);
+	gets(a->number);
 	printf("¬ведите адрес\n");
-	gets((*a).adress);
+	gets(a->adress);
 
 }
 
@@ -139,3 +140,4 @@ void write_f(char* s) {
 		printf("%s %s %s\n", a.name, a.adress, a.number);
 	fclose(f);
 }
+*/

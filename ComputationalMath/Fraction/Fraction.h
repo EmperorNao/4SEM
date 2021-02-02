@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 
 
@@ -18,6 +19,11 @@ public:
 	Fraction(char* s);
 	// конструктор для дроби в представлении двух чисел - числителя n и знаменателя d
 	Fraction(int n = 0, int d = 1) : nom(n), denom(d) {};
+	~Fraction() {
+
+
+
+	}
 
 	// метод сокращения дроби до несократимой
 	void reduce();
@@ -25,6 +31,7 @@ public:
 	// оператор присваивания
 	void operator=(int number);
 
+	operator double() { return nom / denom; }
 	// оператор перегрузки вывода дроби obj в поток вывода os
 	friend std::ostream& operator<<(std::ostream& os, Fraction obj);
 
@@ -33,6 +40,12 @@ public:
 	// операторы сравнения дробей left и right
 	friend bool operator>(Fraction left, Fraction right);
 	friend bool operator<(Fraction left, Fraction right);
+	friend bool operator==(Fraction left, Fraction right);
+	friend bool operator!=(Fraction left, Fraction right); 
+	friend bool operator==(Fraction left, int right);
+	friend bool operator!=(int left, Fraction right);
+	friend bool operator==(int left, Fraction right);
+	friend bool operator!=(Fraction left, int right);
 
 	// бинарные операторы
 	friend Fraction operator*(Fraction a, Fraction b);
@@ -66,3 +79,5 @@ public:
 
 // возвращает абсолютное значение дроби obj
 Fraction abs(Fraction obj);
+Fraction log(Fraction obj);
+Fraction pow(Fraction a, Fraction b);
