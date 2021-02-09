@@ -1,2 +1,5 @@
 ﻿  Count.cpp
+  Integral.cpp
+  Создание кода...
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(83): warning C4715: Matrix<double>::operator(): значение возвращается не при всех путях выполнения
   Integrals.vcxproj -> C:\D\Programming\4SEM\ComputationalMath\Integrals\Debug\Integrals.exe

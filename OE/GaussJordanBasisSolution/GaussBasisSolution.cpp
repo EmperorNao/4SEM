@@ -49,7 +49,7 @@ int forward_pass(Matr& matr) {
 
 		if (matr(i, i) != 0) {
 
-			matr.mult_i_columns_by_k(i, 1 / matr(i, i));
+			matr.mult_i_row_by_k(i, 1 / matr(i, i));
 
 			for (int j = i + 1; j < m; ++j) {
 
@@ -73,7 +73,7 @@ int forward_pass(Matr& matr) {
 			}
 			if (ind == n - 1) {
 
-				return 0;
+				++i;
 
 			}
 
@@ -169,6 +169,7 @@ std::vector<Fraction> optimize_function_with_restrictions(std::function<Fraction
 		return {};
 
 	}
+	std::cout << matr << std::endl;
 	int number_of_basis_variables = matr.size().first;
 	int number_of_variables = matr.size().second - 1;
 
@@ -183,10 +184,10 @@ std::vector<Fraction> optimize_function_with_restrictions(std::function<Fraction
 	std::vector<Fraction> best_solution;
 	Fraction max_value(INT_MIN, 1);
 
+	std::cout << number_of_basis_variables;
 	while (next_combination(combinations, number_of_variables, number_of_basis_variables)) {
 
 		auto solution = basis_solution(matr, combinations);
-
 
 		for (int i = 0; i < solution.size(); ++i) {
 

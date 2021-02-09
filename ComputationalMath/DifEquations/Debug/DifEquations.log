@@ -1,0 +1,5 @@
+﻿  DifferencialEquations.cpp
+  main.cpp
+  Создание кода...
+C:\D\Programming\4SEM\ComputationalMath\DifEquations\DifferencialEquations.cpp(202,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  DifEquations.vcxproj -> C:\D\Programming\4SEM\ComputationalMath\DifEquations\Debug\DifEquations.exe

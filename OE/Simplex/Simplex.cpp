@@ -13,11 +13,6 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
 			basis_variables.push_back(i);
 
 		}
-
-	}
-
-	for (int i = 1; i < target.size(); ++i) {
-
 		all_variables.push_back(i);
 
 	}
@@ -34,11 +29,6 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
 			matr(i, j) = _matr(i, j - 1);
 
 		}
-
-	}
-
-	for (int i = 0; i < _m; ++i) {
-
 		matr(i, 0) = _matr(i, _n - 1);
 
 	}
@@ -49,11 +39,27 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
 
 	}
 
+	for (int i = 0; i < _m; ++i) {
+
+		for (int j = 0; j < basis_variables.size(); ++j) {
+
+			if (matr(i, basis_variables[j])) {
+			
+				matr.mult_i_row_by_k(i, 1 / matr(i, basis_variables[j]));
+				break;
+
+			}
+
+		}
+
+	}
+
+
 	int m = _m + 1;
 	int n = _n;
-
-	std::vector<Fraction> result(n - 1, Fraction(0));
 	int variable_index = -1;
+
+
 	for (int i = 1; (i < n) and (variable_index < 0); ++i) {
 
 		if (matr(m - 1, i) < Fraction(0)) {
@@ -64,9 +70,12 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
 
 	}
 	
-	std::cout << matr << std::endl;
+	int step = 1;
+	std::cout << std::endl;
 	while (variable_index > 0) {
 
+		std::cout << step << " шаг симплекс метода и соответствующая симплекс таблица" << std::endl;
+		std::cout << matr << std::endl;
 		int decision_index = -1;
 		Fraction min_relation(INT_MAX - 1);
 		for (int j = 0; j < m - 1; ++j) {
@@ -88,11 +97,7 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
 		
 
 		basis_variables[decision_index] = all_variables[variable_index - 1];
-		for (int i = 0; i < n; ++i) {
-
-			matr(decision_index, i) /= matr(decision_index, variable_index);
-
-		}
+		matr.mult_i_row_by_k(decision_index, 1 / matr(decision_index, variable_index));
 
 		for (int i = 0; i < decision_index; ++i) {
 
@@ -116,20 +121,30 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
 			}
 
 		}
-
-		std::cout << matr << std::endl;
+		step++;
 
 	}
+	std::cout << step << " шаг симплекс метода и соответствующая симплекс таблица" << std::endl;
+	std::cout << matr << std::endl;
+
+	return form_solution(matr, all_variables, basis_variables);
+
+}
 
 
+std::vector<Fraction> form_solution(Matr matr, std::vector<int> all_variables, std::vector<int> basis_variables) {
+
+	std::vector<Fraction> result(all_variables.size() + 1, Fraction(0));
+	result[0] = matr(basis_variables.size(), 0);
 	for (int i = 0; i < basis_variables.size(); ++i) {
 
 		auto it = std::find(all_variables.begin(), all_variables.end(), basis_variables[i]);
 		int pos = std::distance(all_variables.begin(), it);
-		result[pos] = matr(i, 0);
+		result[pos + 1] = matr(i, 0);
 
 	}
-	
+
 	return result;
+
 
 }

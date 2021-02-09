@@ -1,2 +1,21 @@
-﻿  Fraction.cpp
+﻿  GaussBasisSolution.cpp
+C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\GaussBasisSolution.cpp(12,5): warning C4804: <: небезопасное использование типа "bool" в операции
+C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\GaussBasisSolution.cpp(105,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\GaussBasisSolution.cpp(192,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(289,1): warning C4804: <: небезопасное использование типа "bool" в операции
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(286): message : во время компиляции функции-члена класс шаблон "void Matrix<Fraction>::add_i_row_to_j_mult_by_k(int,int,type)"
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(286): message :         with
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(286): message :         [
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(286): message :             type=Fraction
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(286): message :         ]
+C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\GaussBasisSolution.cpp(56): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Matrix<Fraction>::add_i_row_to_j_mult_by_k(int,int,type)"
+C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\GaussBasisSolution.cpp(56): message :         with
+C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\GaussBasisSolution.cpp(56): message :         [
+C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\GaussBasisSolution.cpp(56): message :             type=Fraction
+C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\GaussBasisSolution.cpp(56): message :         ]
+C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\GaussBasisSolution.cpp(4): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Matrix<Fraction>"
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(236,1): warning C4804: <: небезопасное использование типа "bool" в операции
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(233): message : во время компиляции функции-члена класс шаблон "void Matrix<Fraction>::swap_rows(int,int)"
+C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\GaussBasisSolution.cpp(45): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Matrix<Fraction>::swap_rows(int,int)"
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(83): warning C4715: Matrix<Fraction>::operator(): значение возвращается не при всех путях выполнения
   GaussJordanBasisSolution.vcxproj -> C:\D\Programming\4SEM\OE\GaussJordanBasisSolution\Debug\GaussJordanBasisSolution.exe

@@ -248,7 +248,7 @@ class Matrix {
 		}
 
 		// умножить i-тую строку на k
-		void mult_i_columns_by_k(int _i, type k) {
+		void mult_i_row_by_k(int _i, type k) {
 
 			if ((0 <= _i) and (_i < n)) {
 

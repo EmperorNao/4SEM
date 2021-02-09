@@ -1,22 +1,27 @@
 #pragma once
 #include "ArithmeticalExpression.h"
 
+
 template <typename type>
 class Function {
 
 private:
 
+
 	std::string formul;
 	ArithmeticalExpression expression;
 	size_t number_of_variables;
 
+
 public:
+
 
 	Function() {
 
 
 
 	}
+
 
 	Function(std::string _formul) {
 
@@ -26,7 +31,8 @@ public:
 
 	}
 
-	void setformul(std::string _formul) {
+
+	void set_formul(std::string _formul) {
 
 		formul = _formul;
 		expression.set_formula(_formul);
@@ -34,11 +40,13 @@ public:
 
 	}
 
+
 	double operator() (double x) {
 
 		return expression.count({ x });
 
 	}
+
 
 	double operator() (std::vector<double> x) {
 
@@ -49,7 +57,7 @@ public:
 		}
 		else {
 
-			return nullptr;
+			return 0;
 
 		}
 
