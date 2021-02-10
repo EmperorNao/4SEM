@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include "Fraction.h"
 
 
 template <typename type>
@@ -310,7 +309,7 @@ class Matrix {
 
 		bool is_nullrow(int _i) {
 
-			return std::find_if(matr.begin() + _i * n, matr.begin() + (_i + 1) * n, [](Fraction fr) { return (fr != 0); }) == matr.begin() + (_i + 1) * n;
+			return std::find_if(matr.begin() + _i * n, matr.begin() + (_i + 1) * n, [](type fr) { return (fr != 0); }) == matr.begin() + (_i + 1) * n;
 
 		}
 

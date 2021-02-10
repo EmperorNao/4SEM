@@ -1,0 +1,4 @@
+﻿  UpgradedSimplex.cpp
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(49,34): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(82): warning C4715: Matrix<Fraction>::operator(): значение возвращается не при всех путях выполнения
+  UpgradedSimplex.vcxproj -> C:\D\Programming\4SEM\OE\UpgradedSimplex\Debug\UpgradedSimplex.exe

@@ -5,6 +5,7 @@
 
 typedef Matrix<Fraction> Matr;
 
+
 // функция возвращает вектор оптимального решения и значения функции при этом значении
 // для функции с коэффициентами target и матрицей ограничений matr
 std::vector<Fraction> simplex(Matr matr, std::vector<int> target);

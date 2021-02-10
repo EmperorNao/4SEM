@@ -1,0 +1,32 @@
+﻿  NonLinearSystemSolver.cpp
+C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\NonLinearSystemSolver.cpp(17,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\NonLinearSystemSolver.cpp(20,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\NonLinearSystemSolver.cpp(32,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\NonLinearSystemSolver.cpp(38,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(288,1): warning C4804: <: небезопасное использование типа "bool" в операции
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(285): message : во время компиляции функции-члена класс шаблон "void Matrix<double>::add_i_row_to_j_mult_by_k(int,int,type)"
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(285): message :         with
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(285): message :         [
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(285): message :             type=double
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(285): message :         ]
+C:\D\Programming\4SEM\ComputationalMath\Gauss\Gauss.h(55): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Matrix<double>::add_i_row_to_j_mult_by_k(int,int,type)"
+C:\D\Programming\4SEM\ComputationalMath\Gauss\Gauss.h(55): message :         with
+C:\D\Programming\4SEM\ComputationalMath\Gauss\Gauss.h(55): message :         [
+C:\D\Programming\4SEM\ComputationalMath\Gauss\Gauss.h(55): message :             type=double
+C:\D\Programming\4SEM\ComputationalMath\Gauss\Gauss.h(55): message :         ]
+C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\NonLinearSystemSolver.cpp(9): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Matrix<double>"
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(287,9): warning C4101: t: неиспользованная локальная переменная
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(235,1): warning C4804: <: небезопасное использование типа "bool" в операции
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(232): message : во время компиляции функции-члена класс шаблон "void Matrix<double>::swap_rows(int,int)"
+C:\D\Programming\4SEM\ComputationalMath\Gauss\Gauss.h(48): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Matrix<double>::swap_rows(int,int)"
+C:\D\Programming\4SEM\ComputationalMath\Gauss\Gauss.h(14,1): warning C4804: <: небезопасное использование типа "bool" в операции
+C:\D\Programming\4SEM\ComputationalMath\Gauss\Gauss.h(45): message : выполняется компиляция ссылки на экземпляр шаблон функции "int row_for_absmax_in_j_column_from_i_row<double>(Matrix<double>,int,int)"
+  main.cpp
+C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\NonLinearSystemSolver.cpp(29): message : выполняется компиляция ссылки на экземпляр шаблон функции "int forward_pass<double>(Matrix<double> &)"
+C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\main.cpp(12,10): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
+C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\main.cpp(12,10): message : заполнители и их параметры ожидают переменное число аргументов в количестве 3, но было предоставлено 2
+C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\main.cpp(12,10): message : отсутствующий вариативный аргумент "3" требуется для строки форматирования "%c"
+  Создание кода...
+C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\main.cpp(12,10): message : этот аргумент используется в качестве размера буфера
+C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(82): warning C4715: Matrix<double>::operator(): значение возвращается не при всех путях выполнения
+  NonLinearSystemEquations.vcxproj -> C:\D\Programming\4SEM\ComputationalMath\NonLinearSystemEquations\Debug\NonLinearSystemEquations.exe

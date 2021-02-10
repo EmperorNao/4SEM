@@ -8,11 +8,6 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
 
 	for (int i = 1; i < target.size(); ++i) {
 
-		if (target[i] == 0) {
-
-			basis_variables.push_back(i);
-
-		}
 		all_variables.push_back(i);
 
 	}
@@ -20,6 +15,34 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
 	auto size = _matr.size();
 	int _m = size.first;
 	int _n = size.second;
+
+	for (int i = 0; i < _n - 1; ++i) {
+
+		bool f = false;
+		for (int j = 0; j < _m; ++j) {
+
+			if (_matr(i, j) and f) {
+				
+				f = false;
+				break;
+
+			}
+			if (_matr(i, j) and (not f)) {
+
+				f = true;
+
+			}
+			
+
+		}
+		if (f) {
+
+			basis_variables.push_back(i + 1);
+
+		}
+
+	}
+
 	Matr matr(_m + 1, _n);
 
 	for (int i = 0; i < _m; ++i) {
