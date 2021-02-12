@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\D\Programming\4SEM\ComputationalMath\Fraction;C:\D\Programming\4SEM\ComputationalMath\Matrix;C:\D\Programming\4SEM\OE\Simplex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\D\Programming\4SEM\CompMath\Matrix;C:\D\Programming\4SEM\CompMath\Fraction;C:\D\Programming\4SEM\ComputationalMath\Fraction;C:\D\Programming\4SEM\ComputationalMath\Matrix;C:\D\Programming\4SEM\OE\Simplex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -124,15 +124,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\ComputationalMath\Fraction\Fraction.cpp" />
-    <ClCompile Include="..\..\ComputationalMath\Matrix\Matrix.cpp" />
+    <ClCompile Include="..\..\CompMath\Fraction\Fraction.cpp" />
     <ClCompile Include="..\Simplex\Simplex.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="UpgradedSimplex.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\ComputationalMath\Fraction\Fraction.h" />
-    <ClInclude Include="..\..\ComputationalMath\Matrix\Matrix.h" />
+    <ClInclude Include="..\..\CompMath\Fraction\Fraction.h" />
     <ClInclude Include="..\Simplex\Simplex.h" />
     <ClInclude Include="UpgradedSimplex.h" />
   </ItemGroup>

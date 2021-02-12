@@ -24,10 +24,7 @@
     <ClCompile Include="UpgradedSimplex.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\ComputationalMath\Fraction\Fraction.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\ComputationalMath\Matrix\Matrix.cpp">
+    <ClCompile Include="..\..\CompMath\Fraction\Fraction.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,11 +35,8 @@
     <ClInclude Include="UpgradedSimplex.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\ComputationalMath\Matrix\Matrix.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\ComputationalMath\Fraction\Fraction.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="..\..\CompMath\Fraction\Fraction.h">
+      <Filter>Исходные файлы</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

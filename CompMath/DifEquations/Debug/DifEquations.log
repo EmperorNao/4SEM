@@ -1,0 +1,16 @@
+﻿  ArithmeticalExpression.cpp
+C:\D\Programming\MLStuff\ArithmeticalExpression\ArithmeticalExpression.cpp(58,14): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\D\Programming\MLStuff\ArithmeticalExpression\ArithmeticalExpression.cpp(306,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\MLStuff\ArithmeticalExpression\ArithmeticalExpression.cpp(308,100): warning C4018: <: несоответствие типов со знаком и без знака
+  Function.cpp
+  DifferencialEquations.cpp
+C:\D\Programming\MLStuff\ArithmeticalExpression\ArithmeticalExpression.cpp(468,20): warning C4018: <: несоответствие типов со знаком и без знака
+  main.cpp
+  Создание кода...
+C:\D\Programming\4SEM\ComputationalMath\DifEquations\DifferencialEquations.cpp(203,8): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+C:\D\Programming\MLStuff\Stack\Stack.h(50): warning C4715: Stack<double>::pop: значение возвращается не при всех путях выполнения
+C:\D\Programming\MLStuff\Stack\Stack.h(61): warning C4715: Stack<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::top: значение возвращается не при всех путях выполнения
+C:\D\Programming\MLStuff\Stack\Stack.h(61): warning C4715: Stack<double>::top: значение возвращается не при всех путях выполнения
+C:\D\Programming\MLStuff\Stack\Stack.h(50): warning C4715: Stack<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::pop: значение возвращается не при всех путях выполнения
+  LINK : не найден или не выполнена сборка C:\D\Programming\4SEM\ComputationalMath\DifEquations\Debug\DifEquations.exe при последней инкрементной компоновке; выполняется полная компоновка
+  DifEquations.vcxproj -> C:\D\Programming\4SEM\ComputationalMath\DifEquations\Debug\DifEquations.exe

@@ -1,4 +1,32 @@
 ﻿  UpgradedSimplex.cpp
-C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(49,34): warning C4018: <: несоответствие типов со знаком и без знака
-C:\D\Programming\4SEM\ComputationalMath\Matrix\Matrix.h(82): warning C4715: Matrix<Fraction>::operator(): значение возвращается не при всех путях выполнения
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(75,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(136,75): warning C4244: +=: преобразование "double" в "_Ty", возможна потеря данных
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(136,75): warning C4244:         with
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(136,75): warning C4244:         [
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(136,75): warning C4244:             _Ty=int
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(136,75): warning C4244:         ]
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(137,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(141,51): warning C4244: -=: преобразование "double" в "_Ty", возможна потеря данных
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(141,51): warning C4244:         with
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(141,51): warning C4244:         [
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(141,51): warning C4244:             _Ty=int
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(141,51): warning C4244:         ]
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(152,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(162,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(185,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(269,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(274,38): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(288,1): warning C4804: <: небезопасное использование типа "bool" в операции
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(285): message : во время компиляции функции-члена класс шаблон "void Matrix<Fraction>::add_i_row_to_j_mult_by_k(int,int,type)"
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(285): message :         with
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(285): message :         [
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(285): message :             type=Fraction
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(285): message :         ]
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(237): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Matrix<Fraction>::add_i_row_to_j_mult_by_k(int,int,type)"
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(237): message :         with
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(237): message :         [
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(237): message :             type=Fraction
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(237): message :         ]
+C:\D\Programming\4SEM\OE\UpgradedSimplex\UpgradedSimplex.cpp(8): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Matrix<Fraction>"
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(82): warning C4715: Matrix<Fraction>::operator(): значение возвращается не при всех путях выполнения
   UpgradedSimplex.vcxproj -> C:\D\Programming\4SEM\OE\UpgradedSimplex\Debug\UpgradedSimplex.exe
