@@ -8,7 +8,7 @@ typedef Matrix<Fraction> Matr;
 
 // функция возвращает вектор оптимального решения и значения функции при этом значении
 // для функции с коэффициентами target и матрицей ограничений matr
-std::vector<Fraction> simplex(Matr matr, std::vector<int> target);
+std::vector<Fraction> simplex(Matr matr, std::vector<Fraction> target);
 
 
 // функция возвращает решение по симплекс-таблице matr по переменным системы all_variables 

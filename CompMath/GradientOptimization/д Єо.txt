@@ -1,0 +1,96 @@
+Parameteres values: 
+x_0 = 0.99999
+x_1 = 2.00001
+Last function value = 5. Current value = -1.00008. Delta = 6.00008
+Parameteres values: 
+x_0 = -2.00001
+x_1 = 7.00005
+Last function value = -1.00008. Current value = -66.0009. Delta = 65.0008
+Parameteres values: 
+x_0 = -4.00005
+x_1 = 25.0002
+Last function value = -66.0009. Current value = -750.01. Delta = 684.009
+Parameteres values: 
+x_0 = -20.0001
+x_1 = 81.0006
+Last function value = -750.01. Current value = -7918.11. Delta = 7168.1
+Parameteres values: 
+x_0 = -60.0004
+x_1 = 265.002
+Last function value = -7918.11. Current value = -82991.2. Delta = 75073
+Parameteres values: 
+x_0 = -204.001
+x_1 = 857.006
+Last function value = -82991.2. Current value = -869178. Delta = 786187
+Parameteres values: 
+x_0 = -652.005
+x_1 = 2777.02
+Last function value = -869178. Current value = -9.10225e+06. Delta = 8.23308e+06
+Parameteres values: 
+x_0 = -2124.01
+x_1 = 8985.06
+Last function value = -9.10225e+06. Current value = -9.53202e+07. Delta = 8.62179e+07
+Parameteres values: 
+x_0 = -6860.05
+x_1 = 29081.2
+Last function value = -9.53202e+07. Current value = -9.98206e+08. Delta = 9.02886e+08
+Parameteres values: 
+x_0 = -22220.2
+x_1 = 94105.7
+Last function value = -9.98206e+08. Current value = -1.04533e+10. Delta = 9.45514e+09
+Parameteres values: 
+x_0 = -71884.3
+x_1 = 304539
+Last function value = -1.04533e+10. Current value = -1.09469e+11. Delta = 9.90156e+10
+Parameteres values: 
+x_0 = -232654
+x_1 = 985505
+Last function value = -1.09469e+11. Current value = -1.14638e+12. Delta = 1.03691e+12
+Parameteres values: 
+x_0 = -752844
+x_1 = 3.18917e+06
+Last function value = -1.14638e+12. Current value = -1.2005e+13. Delta = 1.08586e+13
+Parameteres values: 
+x_0 = -2.43644e+06
+x_1 = 1.03204e+07
+Last function value = -1.2005e+13. Current value = -1.2572e+14. Delta = 1.13715e+14
+Parameteres values: 
+x_0 = -7.88331e+06
+x_1 = 3.33985e+07
+Last function value = -1.2572e+14. Current value = -1.31661e+15. Delta = 1.19089e+15
+Parameteres values: 
+x_0 = -2.55083e+07
+x_1 = 1.08074e+08
+Last function value = -1.31661e+15. Current value = -1.3786e+16. Delta = 1.24694e+16
+Parameteres values: 
+x_0 = -8.27083e+07
+x_1 = 3.49274e+08
+Last function value = -1.3786e+16. Current value = -1.44039e+17. Delta = 1.30253e+17
+Parameteres values: 
+x_0 = -2.66708e+08
+x_1 = 1.13167e+09
+Last function value = -1.44039e+17. Current value = -1.51138e+18. Delta = 1.36734e+18
+Parameteres values: 
+x_0 = -8.55508e+08
+x_1 = 3.69167e+09
+Last function value = -1.51138e+18. Current value = -1.60548e+19. Delta = 1.45434e+19
+Parameteres values: 
+x_0 = -2.90351e+09
+x_1 = 1.18837e+10
+Last function value = -1.60548e+19. Current value = -1.67296e+20. Delta = 1.51241e+20
+Parameteres values: 
+x_0 = -9.45711e+09
+x_1 = 3.80981e+10
+Last function value = -1.67296e+20. Current value = -1.72232e+21. Delta = 1.55503e+21
+Parameteres values: 
+x_0 = -3.56715e+10
+x_1 = 9.05269e+10
+Last function value = -1.72232e+21. Current value = -1.01519e+22. Delta = 8.42956e+21
+Parameteres values: 
+x_0 = -3.56715e+10
+x_1 = 5.09957e+11
+Last function value = -1.01519e+22. Current value = -2.76975e+23. Delta = 2.66823e+23
+Parameteres values: 
+x_0 = -3.56715e+10
+x_1 = 5.09957e+11
+Last function value = -2.76975e+23. Current value = -2.76975e+23. Delta = 0

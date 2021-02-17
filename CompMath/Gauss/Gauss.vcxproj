@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\D\Programming\4SEM\ComputationalMath\Fraction;C:\D\Programming\4SEM\ComputationalMath\Matrix;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\D\Programming\4SEM\CompMath\Fraction;C:\D\Programming\4SEM\CompMath\Matrix;C:\D\Programming\4SEM\ComputationalMath\Fraction;C:\D\Programming\4SEM\ComputationalMath\Matrix;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Fraction\Fraction.h" />
-    <ClInclude Include="..\Matrix\matrix.h" />
+    <ClInclude Include="..\Matrix\Matrix.h" />
     <ClInclude Include="Gauss.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

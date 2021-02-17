@@ -5,7 +5,7 @@ std::pair<bool, std::vector<double>> solve_nonlinear_system(std::vector<Rational
 	 double eps, int max_iteration) {
 
 	int current_iteration = 0;
-	double sum_of_abs = INT_MAX;
+	double sum_of_abs = INT_MAX*10e10;
 	RealMatr matr(system.size(), system.size() + 1);
 	std::vector<double> solution = start;
 
@@ -41,6 +41,7 @@ std::pair<bool, std::vector<double>> solve_nonlinear_system(std::vector<Rational
 
 		}
 
+		printf("Error = %i\n", sum_of_abs);
 	}
 	return { current_iteration < max_iteration, solution };
 

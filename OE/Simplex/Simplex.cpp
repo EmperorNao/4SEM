@@ -1,7 +1,7 @@
 #include "Simplex.h"
 
 
-std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
+std::vector<Fraction> simplex(Matr _matr, std::vector<Fraction> target) {
 
 	std::vector<int> all_variables;
 	std::vector<int> basis_variables;
@@ -56,11 +56,12 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
 
 	}
 
-	for (int i = 0; i < target.size(); ++i) {
+	for (int i = 1; i < target.size(); ++i) {
 
-		matr(_m, i) = Fraction(-target[i]);
+		matr(_m, i) -= target[i];
 
 	}
+	matr(_m, 0) = target[0];
 
 	for (int i = 0; i < _m; ++i) {
 
@@ -105,7 +106,7 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<int> target) {
 
 			if ((matr(j, variable_index) > Fraction(0)) and (matr(j, 0)/matr(j, variable_index) < min_relation)) {
 
-				min_relation = matr(j, variable_index);
+				min_relation = matr(j, 0) / matr(j, variable_index);
 				decision_index = j;
 
 			}
