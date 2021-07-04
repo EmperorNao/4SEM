@@ -10,3 +10,11 @@ test
 *.pdf
 *.ipch
 *.tlog
+*.xlsx
+*.png
+*.jpg
+*.djvu
+*.ggb
+*.mp4
+*.iml
+*.xml
