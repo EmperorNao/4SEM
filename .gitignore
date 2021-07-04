@@ -5,3 +5,8 @@
 *.vs
 Debug
 test
+*.docx
+*.doc
+*.pdf
+*.ipch
+*.tlog
