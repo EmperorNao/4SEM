@@ -15,7 +15,7 @@ int main() {
 	Matr matr(m, n);
 	std::cout << "¬ведите расширенную матрицу системы " << std::endl;
 	std::cin >> matr;
-	std::vector<int> target(matr.size().second);
+	std::vector<Fraction> target(matr.size().second);
 
 	std::cout << "¬ведите вектор коэффициентов целевой функции, первым идЄт свободный член" << std::endl;
 	for (int i = 0; i < target.size(); ++i) {

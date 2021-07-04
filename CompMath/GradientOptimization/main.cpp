@@ -35,10 +35,11 @@ int main() {
 	auto solution = crushing_gradient_descent(f, conf);
 	if (solution.first) {
 
+		std::string vars = f.get_variables();
 		std::cout << "f = " << f(solution.second) << std::endl;
 		for (int i = 0; i < solution.second.size(); ++i) {
 
-			std::cout << "x_" << i + 1 << " = "<< solution.second[i] << std::endl;
+			std::cout << vars[i] << " = "<< solution.second[i] << std::endl;
 
 		}
 

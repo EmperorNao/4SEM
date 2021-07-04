@@ -14,7 +14,7 @@ int row_for_absmax_in_j_column_from_i_row(Matrix<type> matr, int _j, int _i) {
 	if ((0 <= _j < n) and (0 <= _i < m)) {
 
 
-		for (int i = 1; i < m; ++i) {
+		for (int i = _i; i < m; ++i) {
 
 			if (max < abs(matr(i, _j))) {
 
@@ -42,6 +42,7 @@ int forward_pass(Matrix<type>& matr) {
 	int k = 0;
 	for (int i = 0; i < m - 1; ++i) {
 
+		/*
 		int ind = row_for_absmax_in_j_column_from_i_row(matr, i, i);
 		if (ind != i) {
 
@@ -49,13 +50,14 @@ int forward_pass(Matrix<type>& matr) {
 			k++;
 
 		}
+		*/
 
+		matr.mult_i_row_by_k(i, type(1.0) / matr(i, i));
 		for (int j = i + 1; j < m; ++j) {
 
-			matr.add_i_row_to_j_mult_by_k(i, j, -1 * (matr(j, i) / matr(i, i)));
+			matr.add_i_row_to_j_mult_by_k(i, j, -1 * matr(j, i));
 
 		}
-
 
 	}
 
@@ -70,7 +72,7 @@ std::vector<type> back_propagation(Matrix<type> matr, int last = -1) {
 	auto sizes = matr.size();
 	int m = sizes.first;
 	int n = sizes.second;
-	std::vector<type> p(m);
+	std::vector<type> p(m);	
 
 	if (last < 0) {
 
@@ -78,11 +80,13 @@ std::vector<type> back_propagation(Matrix<type> matr, int last = -1) {
 
 	}
 
+
 	p[m - 1] = matr(m - 1, last) / matr(m - 1, m - 1);
+
 
 	for (int k = m - 2; k >= 0; --k) {
 
-		type sum = 0;
+		type sum {0};
 
 		for (int j = k + 1; j < m; ++j) {
 
@@ -172,7 +176,7 @@ Matrix<type> inverse(Matrix<type> matr) {
 		}
 
 		forward_pass(new_matr);
-
+		std::cout << new_matr << std::endl;
 		for (int i = n; i < 2 * n; ++i) {
 
 			std::vector<type> col = back_propagation(new_matr, i);

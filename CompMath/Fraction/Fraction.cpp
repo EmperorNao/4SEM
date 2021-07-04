@@ -158,8 +158,19 @@ Fraction operator/(int number, Fraction a) {
 
 bool operator>(Fraction left, Fraction right) {
 
-	long long left_nom = left.nom * right.denom;
-	long long right_nom = right.nom * left.denom;
+	if ((left.nom < 0) and (right.nom >= 0)) {
+
+		return false;
+
+	}
+	if ((left.nom >= 0) and (right.nom < 0)) {
+
+		return true;
+
+	}
+
+	long long int left_nom = long long(left.nom) * long long(right.denom);
+	long long int right_nom = long long(right.nom) * long long(left.denom);
 	return left_nom > right_nom;
 
 }
@@ -167,8 +178,19 @@ bool operator>(Fraction left, Fraction right) {
 
 bool operator<(Fraction left, Fraction right) {
 
-	long long left_nom = left.nom * right.denom;
-	long long right_nom = right.nom * left.denom;
+	if ((left.nom < 0) and (right.nom >= 0)) {
+
+		return true;
+
+	}
+	if ((left.nom >= 0) and (right.nom < 0)) {
+
+		return false;
+
+	}
+
+	long long int left_nom = long long(left.nom) * long long(right.denom);
+	long long int right_nom = long long(right.nom) * long long(left.denom);
 	return left_nom < right_nom;
 
 }
@@ -345,5 +367,12 @@ Fraction abs(Fraction obj) {
 	}
 
 	return obj;
+
+}
+
+
+Fraction pow(Fraction a, Fraction b) {
+
+	return pow(double(a), double(b));
 
 }

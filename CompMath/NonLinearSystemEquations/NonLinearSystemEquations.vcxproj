@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\D\Programming\MLStuff\GradientDescents;C:\D\Programming\MLStuff\Function;C:\D\Programming\MLStuff\Stack;C:\D\Programming\MLStuff\ArithmeticalExpression;C:\D\Programming\4SEM\ComputationalMath\Gauss;C:\D\Programming\4SEM\ComputationalMath\Matrix;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\D\Programming\4SEM\CompMath\Gauss;C:\D\Programming\4SEM\CompMath\Matrix;C:\D\Programming\MLStuff\GradientDescents;C:\D\Programming\MLStuff\Function;C:\D\Programming\MLStuff\Stack;C:\D\Programming\MLStuff\ArithmeticalExpression;C:\D\Programming\4SEM\ComputationalMath\Gauss;C:\D\Programming\4SEM\ComputationalMath\Matrix;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

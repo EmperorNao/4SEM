@@ -1,5 +1,0 @@
-﻿  BinaryCreate.c
-  Text.c
-  Создание кода...
-C:\D\Programming\4SEM\OOP\FilesInC\BinaryCreate.c(24,6): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
-  FilesInC.vcxproj -> C:\D\Programming\4SEM\OOP\FilesInC\Debug\FilesInC.exe

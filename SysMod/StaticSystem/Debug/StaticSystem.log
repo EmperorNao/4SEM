@@ -1,4 +1,0 @@
-﻿  main.cpp
-C:\D\Programming\4SEM\SysMod\StaticSystem\main.cpp(49,21): warning C4018: <: несоответствие типов со знаком и без знака
-C:\D\Programming\4SEM\SysMod\StaticSystem\main.cpp(10,6): warning C4101: number_of_parameters: неиспользованная локальная переменная
-  StaticSystem.vcxproj -> C:\D\Programming\4SEM\SysMod\StaticSystem\Debug\StaticSystem.exe

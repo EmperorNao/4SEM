@@ -1,10 +1,68 @@
 #include "Simplex.h"
 
 
-std::vector<Fraction> simplex(Matr _matr, std::vector<Fraction> target) {
 
+int F(int i, std::vector<int> all_variables, std::vector<int> basis_variables) {
+
+	int m = basis_variables.size();
+	int n = all_variables.size() - m;
+
+	if (i > n) {
+
+		return i - n;
+
+	}
+	else {
+
+		return m + i;
+
+	}
+
+
+}
+
+
+std::vector<Fraction> form_solution(Matr matr, std::vector<int> all_variables, std::vector<int> basis_variables) {
+
+	std::vector<Fraction> result(all_variables.size() + 1, Fraction(0));
+	result[0] = matr(basis_variables.size(), 0);
+	for (int i = 0; i < basis_variables.size(); ++i) {
+
+		auto it = std::find(all_variables.begin(), all_variables.end(), basis_variables[i]);
+		int pos = std::distance(all_variables.begin(), it);
+		result[pos + 1] = matr(i, 0);
+
+	}
+
+	return result;
+
+}
+
+
+std::vector<Fraction> form_dual_solution(Matr matr, \
+	std::vector<int> all_variables, std::vector<int> basis_variables) {
+
+	std::vector<Fraction> result(all_variables.size() + 1, Fraction(0));
+	result[0] = matr(basis_variables.size(), 0);
+	for (int i = 0; i < all_variables.size(); ++i) {
+
+		auto it = std::find(all_variables.begin(), all_variables.end(), F(all_variables[i], all_variables, basis_variables));
+		int pos = std::distance(all_variables.begin(), it);
+		result[pos + 1] = matr(basis_variables.size(), i + 1);
+
+	}
+
+	return result;
+
+
+}
+
+
+std::pair<std::vector<Fraction>, std::vector<Fraction>> simplex(Matr& _matr, std::vector<Fraction> target) {
+
+	bool log = true;
 	std::vector<int> all_variables;
-	std::vector<int> basis_variables;
+	std::vector<int> basis_variables = {3, 4, 5, 6, 7};
 
 	for (int i = 1; i < target.size(); ++i) {
 
@@ -16,19 +74,21 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<Fraction> target) {
 	int _m = size.first;
 	int _n = size.second;
 
+	/*
 	for (int i = 0; i < _n - 1; ++i) {
 
 		bool f = false;
 		for (int j = 0; j < _m; ++j) {
 
-			if (_matr(i, j) and f) {
+			if (abs(_matr(i, j)) and f) {
 				
 				f = false;
 				break;
 
 			}
-			if (_matr(i, j) and (not f)) {
+			if (abs(_matr(i, j)) and (not f)) {
 
+				_matr.mult_i_row_by_k(i, 1/_matr(i, j));
 				f = true;
 
 			}
@@ -42,6 +102,7 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<Fraction> target) {
 		}
 
 	}
+	*/
 
 	Matr matr(_m + 1, _n);
 
@@ -98,8 +159,34 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<Fraction> target) {
 	std::cout << std::endl;
 	while (variable_index > 0) {
 
-		std::cout << step << " шаг симплекс метода и соответствующая симплекс таблица" << std::endl;
-		std::cout << matr << std::endl;
+		if (log) {
+
+			std::cout << step << " шаг симплекс метода и соответствующая симплекс таблица" << std::endl;
+			for (int i = 0; i < m; ++i) {
+
+				if (i != m - 1) {
+
+					std::cout << "y_" << basis_variables[i] << " ";
+
+
+				}
+				else {
+
+					std::cout << "z ";
+
+				}
+				for (int j = 0; j < n; ++j) {
+
+					std::cout << matr(i, j) << " ";
+
+				}
+
+				std::cout << std::endl;
+
+
+			}
+
+		}
 		int decision_index = -1;
 		Fraction min_relation(INT_MAX - 1);
 		for (int j = 0; j < m - 1; ++j) {
@@ -148,27 +235,37 @@ std::vector<Fraction> simplex(Matr _matr, std::vector<Fraction> target) {
 		step++;
 
 	}
-	std::cout << step << " шаг симплекс метода и соответствующая симплекс таблица" << std::endl;
-	std::cout << matr << std::endl;
 
-	return form_solution(matr, all_variables, basis_variables);
+	if (log) {
 
-}
+		std::cout << step << " шаг симплекс метода и соответствующая симплекс таблица" << std::endl;
+		for (int i = 0; i < m; ++i) {
+
+			if (i != m - 1) {
+
+				std::cout <<  "y_" << basis_variables[i] << " ";
 
 
-std::vector<Fraction> form_solution(Matr matr, std::vector<int> all_variables, std::vector<int> basis_variables) {
+			}
+			else {
 
-	std::vector<Fraction> result(all_variables.size() + 1, Fraction(0));
-	result[0] = matr(basis_variables.size(), 0);
-	for (int i = 0; i < basis_variables.size(); ++i) {
+				std::cout << "z ";
 
-		auto it = std::find(all_variables.begin(), all_variables.end(), basis_variables[i]);
-		int pos = std::distance(all_variables.begin(), it);
-		result[pos + 1] = matr(i, 0);
+			}
+			for (int j = 0; j < n; ++j) {
+
+				std::cout << matr(i, j) << " ";
+
+			}
+
+			std::cout << std::endl;
+
+
+		}
 
 	}
 
-	return result;
-
+	_matr = matr;
+	return { form_solution(matr, all_variables, basis_variables), form_dual_solution(matr, all_variables, basis_variables) };
 
 }

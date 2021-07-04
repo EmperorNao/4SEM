@@ -37,6 +37,21 @@ public:
 
 	friend std::istream& operator>>(std::istream& is, Fraction &obj);
 
+	bool is_int() {
+
+		reduce();
+		return denom == 1;
+
+	}
+
+	Fraction float_part() {
+
+		reduce();
+		int sign = nom > 0 ? 1 : -1;
+		return Fraction(abs(nom % denom), abs(denom));
+
+	}
+
 	// операторы сравнения дробей left и right
 	friend bool operator>(Fraction left, Fraction right);
 	friend bool operator<(Fraction left, Fraction right);

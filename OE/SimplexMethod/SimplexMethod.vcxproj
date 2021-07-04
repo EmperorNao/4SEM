@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\D\Programming\4SEM\OE\Simplex;C:\D\Programming\MLStuff\ArithmeticalExpression;C:\D\Programming\MLStuff\Stack;C:\D\Programming\4SEM\ComputationalMath\Matrix;C:\D\Programming\4SEM\ComputationalMath\Fraction;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\D\Programming\4SEM\CompMath\Matrix;C:\D\Programming\4SEM\CompMath\Fraction;C:\D\Programming\4SEM\OE\Simplex;C:\D\Programming\MLStuff\ArithmeticalExpression;C:\D\Programming\MLStuff\Stack;C:\D\Programming\4SEM\ComputationalMath\Matrix;C:\D\Programming\4SEM\ComputationalMath\Fraction;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,16 +125,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\MLStuff\ArithmeticalExpression\ArithmeticalExpression.cpp" />
-    <ClCompile Include="..\..\ComputationalMath\Fraction\Fraction.cpp" />
-    <ClCompile Include="..\..\ComputationalMath\Matrix\Matrix.cpp" />
+    <ClCompile Include="..\..\CompMath\Fraction\Fraction.cpp" />
+    <ClCompile Include="..\..\CompMath\Matrix\Matrix.cpp" />
     <ClCompile Include="..\Simplex\Simplex.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\MLStuff\ArithmeticalExpression\ArithmeticalExpression.h" />
     <ClInclude Include="..\..\..\MLStuff\Stack\Stack.h" />
-    <ClInclude Include="..\..\ComputationalMath\Fraction\Fraction.h" />
-    <ClInclude Include="..\..\ComputationalMath\Matrix\Matrix.h" />
+    <ClInclude Include="..\..\CompMath\Fraction\Fraction.h" />
+    <ClInclude Include="..\..\CompMath\Matrix\Matrix.h" />
     <ClInclude Include="..\Simplex\Simplex.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,4 +1,4 @@
 ﻿  main.cpp
 C:\D\Programming\4SEM\CompMath\GradientOptimization\main.cpp(19,20): warning C4018: <: несоответствие типов со знаком и без знака
-C:\D\Programming\4SEM\CompMath\GradientOptimization\main.cpp(39,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\D\Programming\4SEM\CompMath\GradientOptimization\main.cpp(40,21): warning C4018: <: несоответствие типов со знаком и без знака
   GradientOptimization.vcxproj -> C:\D\Programming\4SEM\CompMath\GradientOptimization\Debug\GradientOptimization.exe

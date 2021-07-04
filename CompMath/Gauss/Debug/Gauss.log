@@ -1,1 +1,19 @@
-﻿  Gauss.vcxproj -> C:\D\Programming\4SEM\CompMath\Gauss\Debug\Gauss.exe
+﻿  main.cpp
+C:\D\Programming\4SEM\CompMath\Gauss\main.cpp(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\D\Programming\4SEM\CompMath\Gauss\Gauss.h(56,32): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\D\Programming\4SEM\CompMath\Gauss\main.cpp(17): message : выполняется компиляция ссылки на экземпляр шаблон функции "int forward_pass<Fraction>(Matrix<Fraction> &)"
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(288,11): warning C4804: <: небезопасное использование типа "bool" в операции
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(285): message : во время компиляции функции-члена класс шаблон "void Matrix<Fraction>::add_i_row_to_j_mult_by_k(int,int,type)"
+          with
+          [
+              type=Fraction
+          ]
+C:\D\Programming\4SEM\CompMath\Gauss\Gauss.h(59): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Matrix<Fraction>::add_i_row_to_j_mult_by_k(int,int,type)"
+          with
+          [
+              type=Fraction
+          ]
+C:\D\Programming\4SEM\CompMath\Gauss\main.cpp(13): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Matrix<Fraction>"
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(288,29): warning C4804: <: небезопасное использование типа "bool" в операции
+C:\D\Programming\4SEM\CompMath\Matrix\Matrix.h(82): warning C4715: Matrix<Fraction>::operator(): значение возвращается не при всех путях выполнения
+  Gauss.vcxproj -> C:\D\Programming\4SEM\CompMath\Gauss\Debug\Gauss.exe

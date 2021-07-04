@@ -1,8 +1,8 @@
 #include "NonLinearSystemSolver.h"
 
 
-std::pair<bool, std::vector<double>> solve_nonlinear_system(std::vector<RationalFunction> system, std::vector<double> start, \
-	 double eps, int max_iteration) {
+std::pair<bool, std::vector<double>> solve_nonlinear_system(std::vector<RationalFunction> system, std::vector<double> start,\
+	double eps, int max_iteration, std::function<void(std::vector<double>)> callback) {
 
 	int current_iteration = 0;
 	double sum_of_abs = INT_MAX*10e10;
@@ -13,16 +13,39 @@ std::pair<bool, std::vector<double>> solve_nonlinear_system(std::vector<Rational
 
 		++current_iteration;
 		sum_of_abs = 0;
-		
+		if (callback != nullptr) {
+
+			callback(solution);
+
+		}
 		for (int i = 0; i < system.size(); ++i) {
 
-			std::vector<double> gradient = autograd(system[i], solution);
+			std::vector<double> gradient;
+			if (system[i].is_cpp_func()) {
+
+				gradient = autograd(system[i].get_function(), solution);
+
+			}
+			else {
+
+				gradient = autograd(system[i], solution);
+
+			}
 			for (int j = 0; j < system.size(); ++j) {
 
 				matr(i, j) = gradient[j];
 
 			}
-			matr(i, system.size()) = -system[i](solution);
+			if (!system[i].is_cpp_func()) {
+
+				matr(i, system.size()) = -system[i](solution);
+
+			}
+			else {
+
+				matr(i, system.size()) =- system[i].get_function()(solution);
+
+			}
 
 		}
 
@@ -37,11 +60,19 @@ std::pair<bool, std::vector<double>> solve_nonlinear_system(std::vector<Rational
 
 		for (int i = 0; i < system.size(); ++i) {
 
-			sum_of_abs += abs(system[i](solution));
+			if (!system[i].is_cpp_func()) {
+
+				sum_of_abs += abs(system[i](solution));
+
+			}
+			else {
+
+				sum_of_abs += abs(system[i].get_function()(solution));
+
+			}
 
 		}
 
-		printf("Error = %i\n", sum_of_abs);
 	}
 	return { current_iteration < max_iteration, solution };
 

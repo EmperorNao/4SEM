@@ -6,21 +6,16 @@
 int main() {
 
 	setlocale(LC_ALL, "RUS");
-	int number_of_variables;
+	int number_of_variables, number_of_equations;
+	std::cin >> number_of_equations;
 	std::cin >> number_of_variables;
 
-	Matrix<Fraction> m(number_of_variables, number_of_variables + 1);
+	Matrix<Fraction> m(number_of_equations, number_of_variables + 1);
 	std::cout << "Введите расширенную матрицу системы" << std::endl;
 	std::cin >> m;
-
+	std::cout << std::endl;
 	forward_pass(m);
-	std::cout << "Решение" << std::endl;	
-	auto solution = back_propagation(m);
-	for (int i = 0; i < solution.size(); ++i) {
-
-		std::cout << char('x' + i) << " = "<< solution[i] << std::endl;
-
-	}
+	std::cout << "Матрица" << std::endl << m << std::endl;
 
 
 }

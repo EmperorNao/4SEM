@@ -14,7 +14,7 @@ int main() {
 	std::cout << "Введите расширенную матрицу системы ограничений" << std::endl;
 	Matr matr(m, n);
 	std::cin >> matr;
-	std::vector<int> target(n);
+	std::vector<Fraction> target(n);
 	for (int i = 0; i < n; ++i) {
 
 		std::cin >> target[i];
@@ -22,7 +22,7 @@ int main() {
 	}
 
 	std::cout << "Метод больших штрафов" << std::endl;
-	auto solution = simplex_regularization(matr, target);
+	auto solution = simplex_regularization(matr, target, true);
 	std::cout << "z_max = " << solution[0] << std::endl;
 	for (int i = 1; i < solution.size() - 2; ++i) {
 

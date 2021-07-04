@@ -200,17 +200,17 @@ class Matrix {
 		}
 
 
-		friend Matrix operator*(Matrix a, std::vector<double> b) {
+		friend std::vector<double> operator*(Matrix a, std::vector<double> b) {
 
-			Matrix new_matrix(1, a.m);
+			std::vector<double> new_matrix(a.m);
 			if (a.m == b.size()) {
 
 				for (int i = 0; i < a.m; ++i) {
 
-					new_matrix(0, i) = 0;
-					for (int j = 0; j < a.n; ++j) {
+					new_matrix[i] = 0;
+					for (int j = 0; j < b.size(); ++j) {
 
-						new_matrix(0, i) += a(i, j) * b[j];
+						new_matrix[i] += a(i, j) * b[j];
 
 					}
 
@@ -222,7 +222,7 @@ class Matrix {
 		}
 
 
-		friend Matrix operator*(std::vector<double> b, Matrix a) {
+		friend std::vector<double> operator*(std::vector<double> b, Matrix a) {
 
 			return a * b;
 
